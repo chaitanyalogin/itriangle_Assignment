@@ -12,7 +12,7 @@ return(
 
 <div className="min-h-screen bg-gray-100 p-10">
 
-<h1 className="text-3xl font-bold mb-6 text-gray-800"></h1>
+<h1 className="text-3xl font-bold mb-6 text-gray-800">Approval Workflow System</h1>
 
 
 <div className="flex gap-4 mb-8 bg-white p-4 rounded shadow">
