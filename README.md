@@ -1,24 +1,15 @@
-# itriangle_Assignment
-Purchase approval workflow using React, Node.js, Express and PostgreSQL
+# iTriangle Approval Workflow Assignment
 
-# Approval Workflow System
+Purchase approval workflow system built using React, Node.js, Express and PostgreSQL.
 
-A full stack approval workflow system built using React, Node.js, Express and PostgreSQL.  
-This system allows purchase requests to be created and routed through configurable approval workflows.
+## Project Overview
 
-## Live Demo
-
-Frontend:
-https://your-vercel-url.vercel.app
-
-Backend API:
-https://your-render-url.onrender.com
+This project implements a purchase request approval workflow where requests pass through configurable approval levels before final approval or rejection.
 
 ## Tech Stack
 
 Frontend:
 React (Vite)
-Tailwind CSS
 Axios
 React Router
 
@@ -29,14 +20,7 @@ PostgreSQL
 pg library
 
 Database:
-PostgreSQL (Neon cloud)
-
-Deployment:
-Frontend → Vercel  
-Backend → Render  
-Database → Neon PostgreSQL
-
----
+PostgreSQL (Neon Cloud)
 
 ## Features
 
@@ -47,25 +31,8 @@ Approve / Reject Actions
 Approval History Tracking  
 Role Based Workflow Rules  
 REST API Architecture  
-Cloud Deployment Ready  
 
----
-
-## System Workflow
-
-1 User creates Purchase Request  
-2 System checks approval workflow rules  
-3 If approval required → approval request created  
-4 Approver sees pending approvals  
-5 Approver can approve or reject  
-6 System updates request status  
-7 Approval history stored in audit table  
-
----
-
-## Database Design
-
-Core tables:
+## Database Tables
 
 roles  
 users  
@@ -77,33 +44,54 @@ approval_requests
 approval_request_steps  
 approval_actions  
 
----
-
 ## API Endpoints
 
 Create Purchase Request:
-
 POST /api/pr
 
 Get Purchase Requests:
-
 GET /api/pr
 
 Get Pending Approvals:
-
 GET /api/approval/pending?user_id=2
 
 Approve Request:
-
 POST /api/approval/:id/approve
 
 Reject Request:
-
 POST /api/approval/:id/reject
 
----
+## Setup Instructions
 
-## Local Setup
+Backend setup:
 
-Clone project:
+cd approval-system-backend  
+npm install  
+npm start  
 
+Frontend setup:
+
+cd approval-system-frontend  
+npm install  
+npm run dev  
+
+## Database Setup
+
+PostgreSQL database used (Neon cloud).
+
+Import provided schema before running backend.
+
+## Project Structure
+
+itriangle_Assignment
+
+approval-system-backend → Express API  
+approval-system-frontend → React UI  
+
+## Notes
+
+node_modules folder excluded from submission.
+
+Environment variables required:
+
+DATABASE_URL = PostgreSQL connection string
